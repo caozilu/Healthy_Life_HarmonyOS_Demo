@@ -71,6 +71,15 @@ struct SplashPage {
         .fontSize($r('app.float.default_24'))
         .fontColor($r('app.color.titleColor'))
         .fontWeight(Const.FONT_WEIGHT_700)
+        .letterSpacing(Const.LETTER_1)
+        .margin({
+          top: $r('app.float.default_20'),
+          bottom: $r('app.float.default_8')
+        })
+      Text($r('app.string.EntryAbility_desc'))
+        .fontFamily($r('app.string.HarmonyHeiTi'))
+        .fontColor($r('app.color.titleColor'))
+        .fontWeight(Const.FONT_WEIGHT_400)
         .letterSpacing(Const.LETTER_34)
         .opacity(Const.OPACITY_6)
         .fontSize($r('app.float.default_16'))
