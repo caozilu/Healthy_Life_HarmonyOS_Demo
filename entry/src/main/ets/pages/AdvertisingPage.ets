@@ -24,7 +24,7 @@ struct AdvertisingPage {
 
   goToHomePage() {
     clearInterval(this.intervalId);
-    router.replaceUrl({ url: 'pages/MainPage' });
+    // router.replaceUrl({ url: 'pages/MainPage' });
   }
 
   aboutToAppear() {

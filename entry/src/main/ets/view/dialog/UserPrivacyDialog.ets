@@ -11,7 +11,7 @@ import { CommonConstants as Const } from '../../common/constants/CommonConstants
 
 @CustomDialog
 export default struct UserPrivacyDialog {
-  controller: CustomDialogController;
+  controller: CustomDialogController = new CustomDialogController({ builder: '' });;
   cancel: Function =  () => {};
   confirm: Function =  () => {};
 

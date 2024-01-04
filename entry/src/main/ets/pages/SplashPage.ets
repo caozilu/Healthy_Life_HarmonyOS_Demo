@@ -14,11 +14,12 @@ const IS_PRIVACY: string = 'isPrivacy';
 struct SplashPage {
   context: common.UIAbilityContext = getContext(this) as common.UIAbilityContext;
   dialogController: CustomDialogController = new CustomDialogController({
-    builder: UserPrivacyDialog({
-      cancel: this.exitApp,
-      confirm: this.onConfirm
-    }),
-    cancel: this.exitApp,
+    builder: UserPrivacyDialog(
+      {
+        cancel: () => { this.exitApp() },
+        confirm: () => { this.onConfirm() }
+      }),
+    cancel: () => { this.exitApp() },
     autoCancel: false,
     alignment: DialogAlignment.Bottom,
     offset: { dx: 0, dy: Const.OFFSET_24 }
@@ -58,6 +59,10 @@ struct SplashPage {
         }
       })
     })
+  }
+
+  aboutToDisappear(){
+    clearTimeout();
   }
 
   build() {
